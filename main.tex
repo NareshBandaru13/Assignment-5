@@ -1,0 +1,72 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\setbeamertemplate{caption}[numbered]{}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{caption}
+
+\title{AI1110 \\ Assignment 5}
+\author{Bandaru Naresh Kumar \\ AI21BTECH11006}
+\date{}
+\begin{document}
+	% The title page
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	% The table of contents
+	\begin{frame}{Outline}
+    		\tableofcontents
+	\end{frame}
+	
+	% The question
+	\section{Question}
+	\begin{frame}{Exercise 6.33}
+	Let x and y be jointly normal random variables with parameters $\mu_x,\mu_y,\sigma_x^2,\sigma_y^2$ and r.Find a necessary and sufficient condition for x+y and x-y to be independent.\\
+	\end{frame}
+	
+	% The solution
+	\section{Solution}
+	\begin{frame}{Solution}
+	We have,\\
+	   z = x + y\\
+	   w = x - y\\
+	   are jointly normal random variables.\\
+	Hence if they are uncorrelated,then they are also independent.\\
+	\begin{align}
+	    Co\nu(z,w) &= E[(z-\mu_z)(w-\mu_w)]\\
+	               &= E[{(x-\mu_x)+(y-\mu_y)}{(x-\mu_x)-(y-\mu_y)}]\\
+	               &= Var(x)-Var(y)\\
+	               &= \sigma_x^2 - \sigma_y^2
+	\end{align}
+	\end{frame}
+	
+	% The final answer
+	\section{Answer}
+	\begin{frame}{Answer}
+	   The random variables z and w are uncorrelated.
+	   \begin{align}
+	       \implies Co\nu(z,w) &= 0\\
+	       \implies \sigma_x^2 &= \sigma_y^2
+	   \end{align}
+	   Hence $\sigma_x^2 = \sigma_y^2$ is the necessary and sufficient condition for the independence of x+y and x-y.\\
+	\end{frame}
+	
+\end{document}
